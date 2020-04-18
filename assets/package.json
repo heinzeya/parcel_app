@@ -1,0 +1,18 @@
+{
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "deploy": "mkdir -p ../priv/static/ && cp -R static/* ../priv/static/ && parcel build js/*.js --out-dir ../priv/static/dist --public-url /dist --no-cache",
+    "watch": "mkdir -p ../priv/static/ && cp -R static/* ../priv/static/ && parcel watch js/*.js --out-dir ../priv/static/dist --public-url /dist"
+  },
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "phoenix": "file:../deps/phoenix",
+    "phoenix_html": "file:../deps/phoenix_html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "parcel-plugin-stdin": "^0.1.1",
+    "sass": "^1.26.3"
+  }
+}
